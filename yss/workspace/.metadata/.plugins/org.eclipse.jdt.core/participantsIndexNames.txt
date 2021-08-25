@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1863106320.index
+\SpringPRJ2.0\src
+C:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3468012615.index
+\SpringPRJ\src
+C:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2879860363.index
+\SpringPRJ2.0\src

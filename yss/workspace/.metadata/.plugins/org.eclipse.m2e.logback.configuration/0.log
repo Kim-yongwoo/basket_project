@@ -1,0 +1,1133 @@
+2021-08-25 22:35:14,621 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-25 22:35:35,561 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: kopo:SpringForOracle:0.0.1-SNAPSHOT @ C:\workspace\SpringPRJ\pom.xml.
+2021-08-25 22:35:35,561 [Worker-0: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: kopo:SpringForOracle:0.0.1-SNAPSHOT @ C:\workspace\SpringPRJ\pom.xml.
+2021-08-25 22:35:37,718 [Worker-17: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1033) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:821) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:314) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:678) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:456) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:381) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:356) ~[xstream-1.4.2.jar:na]
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 45 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @54b07d1e
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:171) ~[na:na]
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:59) ~[xstream-1.4.2.jar:na]
+	... 67 common frames omitted
+2021-08-25 22:35:39,360 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:35:39,363 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:35:39,368 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:35:39,370 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:35:39,409 [Worker-17: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:35:41,357 [Worker-2: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: kopo:SpringForOracle:0.0.1-SNAPSHOT @ C:\workspace\SpringPRJ\pom.xml.
+2021-08-25 22:35:42,757 [Worker-2: Updating Maven Dependencies] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1033) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:821) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:149) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:84) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:678) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:456) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:381) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:356) ~[xstream-1.4.2.jar:na]
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 32 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @2f7581ea
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:171) ~[na:na]
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:59) ~[xstream-1.4.2.jar:na]
+	... 54 common frames omitted
+2021-08-25 22:35:51,369 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:35:51,371 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:35:51,374 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:35:51,375 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:36:43,434 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:36:43,435 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:36:43,437 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:36:43,438 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:36:48,575 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:36:48,576 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:36:48,577 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:36:48,578 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:36:48,581 [Worker-19: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringPRJ
+2021-08-25 22:36:48,582 [Worker-19: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringPRJ
+2021-08-25 22:36:48,587 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:36:48,590 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:36:48,596 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:36:48,599 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:36:48,599 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:36:48,601 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:36:48,603 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2021-08-25 22:36:48,607 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:36:48,608 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:36:48,609 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:36:48,611 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:36:48,613 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:36:48,614 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:36:48,618 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:36:48,643 [Worker-19: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:43:30,699 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:30,702 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:43:30,707 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:30,710 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:43:45,356 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:45,357 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:43:45,359 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:45,360 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:43:52,436 [Worker-9: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringPRJ
+2021-08-25 22:43:52,776 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:52,778 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\main\resources
+2021-08-25 22:43:52,780 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:52,783 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ\src\test\resources
+2021-08-25 22:43:52,784 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringPRJ
+2021-08-25 22:43:52,784 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringPRJ
+2021-08-25 22:43:52,788 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:43:52,790 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:43:52,792 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:43:52,798 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:43:52,802 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:43:52,804 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:43:52,807 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:43:52,808 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:43:52,810 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:43:52,813 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:43:52,815 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:43:52,816 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:43:52,843 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:43:52,868 [Worker-20: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:46:51,544 [Worker-23: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: kopo:SpringPRJ2.0:0.0.1-SNAPSHOT @ C:\workspace\SpringPRJ2.0\pom.xml.
+2021-08-25 22:46:54,564 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.pom
+2021-08-25 22:46:55,499 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.pom
+2021-08-25 22:46:55,809 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.pom
+2021-08-25 22:46:56,435 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.pom
+2021-08-25 22:46:56,588 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.pom
+2021-08-25 22:46:56,768 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.pom
+2021-08-25 22:46:57,380 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.pom
+2021-08-25 22:46:57,537 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.pom
+2021-08-25 22:46:57,704 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.pom
+2021-08-25 22:46:58,337 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.pom
+2021-08-25 22:46:58,494 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.pom
+2021-08-25 22:46:58,657 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.pom
+2021-08-25 22:46:59,267 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.pom
+2021-08-25 22:46:59,432 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.pom
+2021-08-25 22:46:59,595 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.pom
+2021-08-25 22:47:00,207 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.pom
+2021-08-25 22:47:00,365 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.pom
+2021-08-25 22:47:00,538 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.pom
+2021-08-25 22:47:01,149 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.pom
+2021-08-25 22:47:01,311 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.pom
+2021-08-25 22:47:01,491 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.pom
+2021-08-25 22:47:02,105 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.pom
+2021-08-25 22:47:02,263 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.pom
+2021-08-25 22:47:02,440 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.pom
+2021-08-25 22:47:03,053 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.pom
+2021-08-25 22:47:03,210 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.pom
+2021-08-25 22:47:03,373 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.pom
+2021-08-25 22:47:03,984 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.pom
+2021-08-25 22:47:04,140 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.pom
+2021-08-25 22:47:04,305 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.pom
+2021-08-25 22:47:04,920 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.pom
+2021-08-25 22:47:05,078 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.pom
+2021-08-25 22:47:05,248 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.pom
+2021-08-25 22:47:05,883 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.pom
+2021-08-25 22:47:06,039 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.pom
+2021-08-25 22:47:06,225 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.pom
+2021-08-25 22:47:06,859 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/apache/commons/commons-parent/41/commons-parent-41.pom
+2021-08-25 22:47:07,015 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/41/commons-parent-41.pom
+2021-08-25 22:47:07,361 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/41/commons-parent-41.pom
+2021-08-25 22:47:07,988 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/apache/apache/18/apache-18.pom
+2021-08-25 22:47:08,149 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+2021-08-25 22:47:08,324 [Worker-23: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+2021-08-25 22:47:08,984 [AetherRepositoryConnector-maven.jahia.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,289 [AetherRepositoryConnector-maven.jahia.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,290 [AetherRepositoryConnector-maven.jahia.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2021-08-25 22:47:09,290 [AetherRepositoryConnector-maven.jahia.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,595 [AetherRepositoryConnector-maven.jahia.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,596 [AetherRepositoryConnector-maven.jahia.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,902 [AetherRepositoryConnector-maven.jahia.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,902 [AetherRepositoryConnector-maven.jahia.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.jar
+2021-08-25 22:47:09,903 [AetherRepositoryConnector-maven.jahia.org-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.jar
+2021-08-25 22:47:10,208 [AetherRepositoryConnector-maven.jahia.org-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar
+2021-08-25 22:47:10,208 [AetherRepositoryConnector-maven.jahia.org-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.jar
+2021-08-25 22:47:10,516 [AetherRepositoryConnector-maven.jahia.org-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar
+2021-08-25 22:47:10,516 [AetherRepositoryConnector-maven.jahia.org-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.jar
+2021-08-25 22:47:10,779 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.jar
+2021-08-25 22:47:10,951 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2021-08-25 22:47:11,067 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,067 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,199 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,356 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2021-08-25 22:47:11,408 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,540 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,558 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,686 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,713 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,717 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,728 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,833 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,849 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,960 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,962 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.jar
+2021-08-25 22:47:11,966 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar
+2021-08-25 22:47:12,008 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.jar
+2021-08-25 22:47:12,111 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE.jar
+2021-08-25 22:47:12,133 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE.jar
+2021-08-25 22:47:12,148 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE.jar
+2021-08-25 22:47:12,256 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE.jar
+2021-08-25 22:47:12,256 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar
+2021-08-25 22:47:12,269 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar
+2021-08-25 22:47:12,436 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3.jar
+2021-08-25 22:47:14,112 [Worker-23: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1033) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:821) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:314) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:678) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:456) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:381) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:356) ~[xstream-1.4.2.jar:na]
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 45 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @20e66402
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:171) ~[na:na]
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:59) ~[xstream-1.4.2.jar:na]
+	... 67 common frames omitted
+2021-08-25 22:47:14,534 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:14,535 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:47:14,537 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:14,539 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:47:14,550 [Worker-23: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:47:17,351 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:17,851 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:18,439 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.3.27.RELEASE/spring-tx-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:18,591 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-tx:4.3.27.RELEASE
+2021-08-25 22:47:19,584 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:19,586 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:47:19,589 [Worker-24: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:19,591 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:47:20,501 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:21,186 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:22,423 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.27.RELEASE/spring-context-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:22,717 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-context:4.3.27.RELEASE
+2021-08-25 22:47:24,595 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:25,201 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:26,155 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.27.RELEASE/spring-beans-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:26,233 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-beans:4.3.27.RELEASE
+2021-08-25 22:47:28,100 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:29,026 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:30,118 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.27.RELEASE/spring-core-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:30,186 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-core:4.3.27.RELEASE
+2021-08-25 22:47:32,062 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2021-08-25 22:47:32,736 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2021-08-25 22:47:33,152 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar
+2021-08-25 22:47:33,246 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-logging:commons-logging:1.2
+2021-08-25 22:47:35,118 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:35,701 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:36,215 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.27.RELEASE/spring-expression-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:36,298 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-expression:4.3.27.RELEASE
+2021-08-25 22:47:38,168 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:38,868 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:39,926 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.27.RELEASE/spring-web-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:39,999 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-web:4.3.27.RELEASE
+2021-08-25 22:47:41,836 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:42,614 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:43,826 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.27.RELEASE/spring-webmvc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:43,921 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-webmvc:4.3.27.RELEASE
+2021-08-25 22:47:45,791 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:46,373 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:47,035 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.27.RELEASE/spring-aop-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:47,112 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aop:4.3.27.RELEASE
+2021-08-25 22:47:48,975 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:49,465 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:49,801 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-aspects/4.3.27.RELEASE/spring-aspects-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:50,018 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-aspects:4.3.27.RELEASE
+2021-08-25 22:47:51,865 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9-sources.jar
+2021-08-25 22:47:52,554 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9-sources.jar
+2021-08-25 22:47:53,481 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:53,482 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:47:53,484 [Worker-26: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:47:53,486 [Worker-26: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:47:53,768 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9-sources.jar
+2021-08-25 22:47:53,903 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.aspectj:aspectjweaver:1.8.9
+2021-08-25 22:47:56,046 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:56,721 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:57,688 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/spring-jdbc/4.3.27.RELEASE/spring-jdbc-4.3.27.RELEASE-sources.jar
+2021-08-25 22:47:57,753 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework:spring-jdbc:4.3.27.RELEASE
+2021-08-25 22:47:59,631 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3-sources.jar
+2021-08-25 22:48:00,255 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3-sources.jar
+2021-08-25 22:48:00,670 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.3.3/commons-fileupload-1.3.3-sources.jar
+2021-08-25 22:48:00,746 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-fileupload:commons-fileupload:1.3.3
+2021-08-25 22:48:02,610 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.jahia.org/maven2/commons-io/commons-io/2.2/commons-io-2.2-sources.jar
+2021-08-25 22:48:03,163 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2-sources.jar
+2021-08-25 22:48:03,655 [Worker-25: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-io/commons-io/2.2/commons-io-2.2-sources.jar
+2021-08-25 22:48:03,788 [Worker-25: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-io:commons-io:2.2
+2021-08-25 22:48:04,106 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:48:04,108 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:48:04,109 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:48:04,110 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:48:04,397 [Worker-21: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringPRJ2.0
+2021-08-25 22:48:05,260 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:48:05,263 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:48:05,268 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:48:05,271 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:48:05,272 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringPRJ2.0
+2021-08-25 22:48:05,272 [Worker-21: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringPRJ2.0
+2021-08-25 22:48:05,278 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:48:05,284 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:48:05,290 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:48:05,294 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:48:05,298 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:48:05,301 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:48:05,304 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:48:05,306 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:48:05,308 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:48:05,311 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:48:05,315 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:48:05,320 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:48:05,328 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:48:05,346 [Worker-21: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:49:09,869 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:49:09,871 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:49:09,873 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:49:09,875 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:49:09,889 [Worker-23: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 22:49:18,101 [Worker-23: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-08-25 22:49:18,448 [Worker-23: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: kopo:SpringPRJ2.0:0.0.1-SNAPSHOT @ C:\workspace\SpringPRJ2.0\pom.xml.
+2021-08-25 22:49:19,007 [Worker-23: Updating Maven Project] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.ExceptionInInitializerError
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.eclipse.m2e.wtp.mavenarchiver.AbstractWTPArchiverConfigurator.mavenProjectChanged(AbstractWTPArchiverConfigurator.java:56) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1033) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:821) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:314) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:407) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$1(ProjectConfigurationManager.java:356) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1369) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:355) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.UpdateMavenProjectJob.runInWorkspace(UpdateMavenProjectJob.java:79) ~[org.eclipse.m2e.core.ui_1.15.0.20200305-1308.jar:na]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at com.thoughtworks.xstream.XStream.setupConverters(XStream.java:678) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:456) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:381) ~[xstream-1.4.2.jar:na]
+	at com.thoughtworks.xstream.XStream.<init>(XStream.java:356) ~[xstream-1.4.2.jar:na]
+	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 36 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @717461cb
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:177) ~[na:na]
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:171) ~[na:na]
+	at com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:59) ~[xstream-1.4.2.jar:na]
+	... 58 common frames omitted
+2021-08-25 22:49:19,442 [Worker-23: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /SpringPRJ2.0/src/main/java because it overlaps with /SpringPRJ2.0/src
+2021-08-25 22:49:19,442 [Worker-23: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /SpringPRJ2.0/src/test/java because it overlaps with /SpringPRJ2.0/src
+2021-08-25 22:49:20,841 [Worker-23: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SpringPRJ2.0
+2021-08-25 22:49:20,849 [Worker-23: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2021-08-25 22:49:21,322 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:49:21,323 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 22:49:21,325 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:49:21,327 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 22:49:21,328 [Worker-27: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SpringPRJ2.0
+2021-08-25 22:49:21,328 [Worker-27: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SpringPRJ2.0
+2021-08-25 22:49:21,331 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:49:21,332 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:49:21,333 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:49:21,335 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:49:21,336 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:49:21,337 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:49:21,340 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 is missing, no dependency information available
+2021-08-25 22:49:21,341 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.9: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.apache.maven.plugins:maven-eclipse-plugin:jar:2.9 has not been downloaded from it before.
+2021-08-25 22:49:21,343 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 is missing, no dependency information available
+2021-08-25 22:49:21,345 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.codehaus.mojo:exec-maven-plugin:1.2.1: Plugin org.codehaus.mojo:exec-maven-plugin:1.2.1 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.codehaus.mojo:exec-maven-plugin:jar:1.2.1 has not been downloaded from it before.
+2021-08-25 22:49:21,346 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for om.fasterxml.jackson.core:jackson-core:jar:2.8.9 is missing, no dependency information available
+2021-08-25 22:49:21,347 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for om.fasterxml.jackson.core:jackson-core:2.8.9: Plugin om.fasterxml.jackson.core:jackson-core:2.8.9 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact om.fasterxml.jackson.core:jackson-core:jar:2.8.9 has not been downloaded from it before.
+2021-08-25 22:49:21,350 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 22:49:21,361 [Worker-27: Building] WARN  Sisu - Error injecting: org.apache.maven.plugin.war.WarMojo
+com.google.inject.ProvisionException: Unable to provision, see the following errors:
+
+1) Error injecting constructor, java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+  at org.apache.maven.plugin.war.WarMojo.<init>(Unknown Source)
+  while locating org.apache.maven.plugin.war.WarMojo
+
+1 error
+	at com.google.inject.internal.InternalProvisionException.toProvisionException(InternalProvisionException.java:226) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1053) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1086) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.space.AbstractDeferredClass.get(AbstractDeferredClass.java:48) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:85) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.provision(InternalFactoryToInitializableAdapter.java:57) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory$1.call(ProviderInternalFactory.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:47) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	at org.eclipse.sisu.inject.Guice4$1.get(Guice4.java:162) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) ~[org.eclipse.sisu.inject-0.3.4.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) ~[org.eclipse.sisu.plexus-0.3.4.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:520) ~[maven-core-3.6.3.jar:3.6.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:354) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:469) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:422) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:227) ~[na:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:167) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:135) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:169) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$1(MavenBuilder.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:105) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+	at org.apache.maven.plugin.war.AbstractWarMojo.<init>(AbstractWarMojo.java:345) ~[maven-war-plugin-2.4.jar:2.4]
+	at org.apache.maven.plugin.war.WarMojo.<init>(WarMojo.java:53) ~[maven-war-plugin-2.4.jar:2.4]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at com.google.inject.internal.DefaultConstructionProxyFactory$ReflectiveProxy.newInstance(DefaultConstructionProxyFactory.java:126) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:114) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.access$000(ConstructorInjector.java:32) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector$1.call(ConstructorInjector.java:98) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:112) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:127) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:66) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:93) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:306) ~[guice-4.2.1-no_aop.jar:na]
+	at com.google.inject.internal.InjectorImpl$1.get(InjectorImpl.java:1050) ~[guice-4.2.1-no_aop.jar:na]
+	... 46 common frames omitted
+2021-08-25 23:21:20,024 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-25 23:21:26,959 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:21:26,967 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 23:21:26,973 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:21:26,978 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 23:23:22,917 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:23:22,922 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 23:23:22,928 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:23:22,930 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-25 23:37:28,148 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-25 23:37:32,724 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:37:32,727 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\main\resources
+2021-08-25 23:37:32,730 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-25 23:37:32,732 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\workspace\SpringPRJ2.0\src\test\resources
+2021-08-26 00:02:52,071 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-26 00:02:56,989 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-26 00:02:56,995 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\git\yss\workspace\SpringPRJ2.0\src\main\resources
+2021-08-26 00:02:57,001 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-08-26 00:02:57,004 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\git\yss\workspace\SpringPRJ2.0\src\test\resources
